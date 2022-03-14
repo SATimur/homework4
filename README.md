@@ -9,53 +9,53 @@
 > Редактируем Vagrantfile следующим образом
 ```
     MACHINES = {
-     :zfs => {
-           :box_name => "centos/7",
-           :box_version => "2004.01",
-           :disks => {
-    :sata1 => {
-           :dfile => './sata1.vdi',
-           :size => 512,
-           :port => 1
+         :zfs => {
+               :box_name => "centos/7",
+               :box_version => "2004.01",
+               :disks => {
+         :sata1 => {
+               :dfile => './sata1.vdi',
+               :size => 512,
+               :port => 1
+         },
+         :sata2 => {
+               :dfile => './sata2.vdi',
+               :size => 512, # Megabytes
+               :port => 2
+         },
+         :sata3 => {
+               :dfile => './sata3.vdi',
+               :size => 512,
+               :port => 3
+         },
+         :sata4 => {
+               :dfile => './sata4.vdi',
+               :size => 512,
+               :port => 4
+         },
+         :sata5 => {
+               :dfile => './sata5.vdi',
+               :size => 512,
+               :port => 5
+         },
+         :sata6 => {
+               :dfile => './sata6.vdi',
+               :size => 512,
+               :port => 6
+         },
+         :sata7 => {
+               :dfile => './sata7.vdi',
+               :size => 512,
+               :port => 7
+         },
+         :sata8 => {
+               :dfile => './sata8.vdi',
+               :size => 512,
+               :port => 8
+         },
+     }
    },
-   :sata2 => {
-          :dfile => './sata2.vdi',
-          :size => 512, # Megabytes
-          :port => 2
-   },
-   :sata3 => {
-         :dfile => './sata3.vdi',
-         :size => 512,
-         :port => 3
-   },
-   :sata4 => {
-        :dfile => './sata4.vdi',
-        :size => 512,
-        :port => 4
-   },
-   :sata5 => {
-       :dfile => './sata5.vdi',
-       :size => 512,
-       :port => 5
-   },
-   :sata6 => {
-       :dfile => './sata6.vdi',
-       :size => 512,
-       :port => 6
-  },
-  :sata7 => {
-       :dfile => './sata7.vdi',
-       :size => 512,
-       :port => 7
-  },
-  :sata8 => {
-       :dfile => './sata8.vdi',
-       :size => 512,
-       :port => 8
-   },
-  }
- },
-}
+ }
 ```
 ```
    box.vm.provision "shell", inline: <<-SHELL
